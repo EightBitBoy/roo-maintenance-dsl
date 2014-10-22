@@ -7,7 +7,7 @@ Domainmodel:
 ;
 
 Type:
-	DataType|MyEntity
+	DataType|MyEntity|RooScript
 ;
 
 DataType:

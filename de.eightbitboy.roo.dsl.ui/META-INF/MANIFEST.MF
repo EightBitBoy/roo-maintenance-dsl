@@ -8,6 +8,21 @@ Bundle-ActivationPolicy: lazy
 Require-Bundle: de.eightbitboy.roo.dsl;visibility:=reexport,
  org.eclipse.xtext.ui,
  org.eclipse.ui.editors;bundle-version="3.5.0",
- org.eclipse.ui.ide;bundle-version="3.5.0"
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.xbase.ui,
+ org.eclipse.ui,
+ org.eclipse.xtext.builder,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types.ui,
+ org.eclipse.jdt.debug.ui,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.compare
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: de.eightbitboy.roo.ui.quickfix,
+ de.eightbitboy.roo.ui.contentassist,
+ de.eightbitboy.roo.ui.contentassist.antlr,
+ de.eightbitboy.roo.ui.internal
+Bundle-Activator: de.eightbitboy.roo.ui.internal.DslActivator

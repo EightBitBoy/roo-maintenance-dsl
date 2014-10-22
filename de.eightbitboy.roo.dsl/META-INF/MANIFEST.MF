@@ -11,6 +11,24 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional,
  org.eclipse.emf.codegen.ecore;resolution:=optional,
  org.eclipse.emf.mwe.utils;resolution:=optional,
- org.eclipse.emf.mwe2.launch;resolution:=optional
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types,
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: de.eightbitboy.roo,
+ de.eightbitboy.roo.services,
+ de.eightbitboy.roo.domainmodel,
+ de.eightbitboy.roo.domainmodel.impl,
+ de.eightbitboy.roo.domainmodel.util,
+ de.eightbitboy.roo.serializer,
+ de.eightbitboy.roo.parser.antlr,
+ de.eightbitboy.roo.parser.antlr.internal,
+ de.eightbitboy.roo.validation,
+ de.eightbitboy.roo.formatting,
+ de.eightbitboy.roo.jvmmodel
