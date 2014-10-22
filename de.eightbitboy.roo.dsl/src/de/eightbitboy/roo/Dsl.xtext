@@ -1,9 +1,56 @@
 grammar de.eightbitboy.roo.Dsl with org.eclipse.xtext.common.Terminals
 
-generate dsl "http://www.eightbitboy.de/roo/Dsl"
+generate domainmodel "http://www.eightbitboy.de/roo/Dsl"
 
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
+Domainmodel:
+	(elements += Type)*
+;
+
+Type:
+	DataType|MyEntity
+;
+
+DataType:
+	'datatype' name = ID
+;
+MyEntity:
+	'entity' name = ID ('extends' superType = [MyEntity])? '{'
+		(features += Feature)*
+	'}'
+;
+ 
+Feature:
+	(many ?= 'many')? name = ID ':' type = [Type]
+;
+
+
+//roo stuff
+RooScript:
+	project += Project
+;
+
+Project:
+	'project' name = ID '{'
+		(preCommands += PreCommand)*
+		(entities += Entity)*
+		(postCommands += PostCommand)*
+	'}'
+;
+
+PreCommand:
+	'preCommand' name = ID
+;
+
+PostCommand:
+	'postCommand' name = ID
+;
+
+Entity:
+	'entity' name = ID '{'
+		(attributes += Attribute)*
+	'}'
+;
+
+Attribute:
+	'attribute' name = ID
+;
