@@ -1,4 +1,4 @@
-grammar de.eightbitboy.roo.Dsl with org.eclipse.xtext.common.Terminals
+grammar de.eightbitboy.roo.Dsl with org.eclipse.xtext.xbase.Xbase
 
 generate domainmodel "http://www.eightbitboy.de/roo/Dsl"
 
