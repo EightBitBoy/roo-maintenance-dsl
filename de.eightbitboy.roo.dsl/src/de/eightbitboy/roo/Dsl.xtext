@@ -31,6 +31,7 @@ RooScript:
 
 Project:
 	'project' name = ID '{'
+		package = ID
 		(preCommands += PreCommand)*
 		(entities += Entity)*
 		(postCommands += PostCommand)*
